@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JavaScript</title>
+</head>
+<body>
+    <script>
+        // function fn_name(parameter){//block of code} 
+        // function greet(name="Harjit"){
+        //     console.log("Hello" + name);
+        // } 
+        // greet("Rohit"); 
+        // greet("Manos"); 
+        // greet("Prashant"); 
+        // greet("Piyush"); 
+        // greet();     // default parameter 
+
+        // Anonymous Functions (example for variables) 
+        let a; 
+        a = function(name){ console.log("Hello" + name);} 
+        a("Rohit"); 
+        a("Manos"); 
+        a("Prashant"); 
+        a("Piyush"); 
+
+        // function with multiple parameters 
+        function add(a,b,c){
+            return a+b+c; 
+        }
+        console.log(add(1,2,3));
+        console.log(add(5,6,7)); 
+
+        //Anonymous Functions (example for mutiplication) 
+        let mutiply;
+        mutiply= function(a,b,c){return a*b*c}
+        console.log(mutiply(4,5,6)); 
+
+        // Arrow Functions 
+        let square=(x)=>{
+            return x*x
+        }
+        console.log(square(7)); 
+
+        //greet using arrow function
+        let greet=(name)=>{console.log("Hello "+ name)}
+        console.log(greet("GC")); 
+
+        // Returning a function 
+        function areaofcircle(r){
+            return 22/7*r*r; 
+        }
+        console.log(areaofcircle(7)); 
+
+        // Conditions in functions 
+        function isEven(n){
+            if (n%2==0){
+                console.log("Even")
+            }
+            else{
+                console.log("Odd") 
+            }
+        }
+        isEven(7); 
+
+        // another example of conditions in functions 
+        function votingeligibility(age){
+            if(age>=18){
+                console.log("Adult: Eligible for voting");
+            }
+            else{
+                console.log("Minor: Not Eligible for voting");
+            }
+        }
+        votingeligibility(3);     
+        votingeligibility(19); 
+
+        // another example of conditions in functions 
+        function grade(score){
+            if (score>=90){
+                console.log("O Grade");
+            }
+            else if (score >= 80){
+                console.log("A Grade");
+            }
+            else if (score>=50){
+                console.log("B Grade"); 
+            }
+            else{
+                console.log("F Grade"); 
+            }
+        }
+        grade(95); 
+        grade(85); 
+        grade(40); 
+        
+        <button onclick="showMessage()">Click Me </button>
+        function showMessage(){
+            alert("Button clicked!"); 
+        }
+        document.write(showMessage()) 
+        
+    </script>
+</body>
+</html>
